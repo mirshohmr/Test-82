@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Lighthaus";
+    src: url("./assets/fonts/Lighthaus.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lighthaus", serif;
+}
+
+.hero-wrapper {
+    position: relative;
+}

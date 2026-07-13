@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "Lighthaus";
+    src: url("./assets/fonts/Lighthaus.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cards {
+    padding: 80px 78px;
+    background-image: url("../assets/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+    left: 30px;
+}
+
+.cards-title {
+    font-family: "Lighthaus", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 75%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+/* .card:hover {
+    border-color: rgba(228, 161, 111, 0.5);
+    transform: translateY(-4px);
+} */
+
+.card-image-wrap {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.card-image {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+/* .card:hover .card-image {
+    transform: scale(1.05);
+} */
+
+.card-button {
+    font-family: "Mont3", sans-serif;
+    background: linear-gradient(90deg, #5e3928, #e4a16f);
+    color: #ffffff;
+    border: none;
+    padding: 14px 0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.card-button:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .cards {
+        padding: 48px 20px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
